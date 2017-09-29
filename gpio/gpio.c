@@ -449,9 +449,8 @@ void doExport (int argc, char *argv [])
 
   pin = atoi (argv [2]) ;
 
-/*add for BananaPro by LeMaker team <-- the OrangePi ZERO has 0 pin (h2+ = 0, wPi = 2, Phys = 13), 
-                                        but because of this it does not work for an interrupt 
-	                                    (for example, "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
+/*add for BananaPro by LeMaker team <-- the OrangePi ZERO has 0 pin (h2+ = 0, wPi = 2, Phys = 13),  
+	                                    (for example, because of this, interrupts on 0 pin do not work "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
 /*
   if (pin == 0)
   {
@@ -573,8 +572,7 @@ void doEdge (int argc, char *argv [])
   mode = argv [3] ;
 
 /*add for BananaPro by LeMaker team <-- the OrangePi ZERO has 0 pin (h2+ = 0, wPi = 2, Phys = 13), 
-                                        but because of this it does not work for an interrupt 
-	                                    (for example, "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
+	                                    (for example, because of this, interrupts on 0 pin do not work "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
 /*
   if (pin==0)
   {
@@ -662,8 +660,7 @@ void doUnexport (int argc, char *argv [])
   pin = atoi (argv [2]) ;
 
   /*add for BananaPro by LeMaker team <-- the OrangePi ZERO has 0 pin (h2+ = 0, wPi = 2, Phys = 13), 
-                                        but because of this it does not work for an interrupt 
-	                                    (for example, "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
+	                                    (for example, because of this, interrupts on 0 pin do not work "gpio edge 0 falling" or in code: "wiringPiISR (2, INT_EDGE_FALLING, my_interrupt);")*/
 /*
   if (pin==0)
   {
